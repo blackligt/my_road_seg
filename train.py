@@ -3,7 +3,8 @@ import argparse
 import torch
 import torchvision
 import torchvision.transforms as transforms
-from models.my_vgg import MyVGG11
+import numpy as np
+# from models.my_vgg import MyVGG11
 import torch.nn as nn
 import torch.optim as optim
 import time
@@ -12,8 +13,8 @@ from pathlib import Path
 import wandb
 from utils.kari_road_dataset import KariRoadDataset
 from utils.plots import plot_image
-from utils.metrics import ConfusionMatrix
-from utils.loss import ce_loss
+#from utils.metrics import ConfusionMatrix
+#from utils.loss import ce_loss
 
 def train(opt):
     epochs = opt.epochs
